@@ -1,31 +1,11 @@
 #include <gtk/gtk.h>
-
-static void openFile(GtkWidget *widget, gpointer data) {
-
-}
+#include "view/mainwindow.h"
 
 static void activate (GtkApplication *app, gpointer user_data) {
-	/* Construct a GtkBuilder instance and load our UI description */
-	GtkBuilder *builder = gtk_builder_new ();
-	gtk_builder_add_from_file (builder, "ui/main.ui", NULL);
+	MainWindow *main_window = main_window_new(NULL);
 
-	/* Connect signal handlers to the constructed widgets. */
-	GObject *window = gtk_builder_get_object (builder, "window");
-	gtk_window_set_application (GTK_WINDOW (window), app);
-
-	GObject *button = gtk_builder_get_object (builder, "openFile");
-	g_signal_connect (button, "clicked", G_CALLBACK (openFile), NULL);
-
-	/*   button = gtk_builder_get_object (builder, "button2");
-	   g_signal_connect (button, "clicked", G_CALLBACK (print_hello), NULL);
-
-	   button = gtk_builder_get_object (builder, "quit");
-	   g_signal_connect_swapped (button, "clicked", G_CALLBACK (quit_cb), window);*/
-
-	gtk_widget_show (GTK_WIDGET (window));
-
-	/* We do not need the builder any more */
-	g_object_unref (builder);
+	gtk_window_set_application (main_window_get_window(main_window), app);
+	main_window_show(main_window);
 }
 
 int main (int argc, char **argv) {

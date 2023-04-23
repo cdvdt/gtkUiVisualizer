@@ -17,6 +17,7 @@
         </child>
         <child>
           <object id="entryFilename" class="GtkEntry">
+            <property name="placeholder-text">filename</property>
             <property name="editable">false</property>
             <property name="hexpand">true</property>
           </object>
