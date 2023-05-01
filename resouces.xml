@@ -2,5 +2,6 @@
 <gresources>
     <gresource prefix="/org/cdvdt/gtkUiVisualizer">
         <file>src/ui/main.ui</file>
+        <file>src/ui/defaultContainer.ui</file>
     </gresource>
 </gresources>

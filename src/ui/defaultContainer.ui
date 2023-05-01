@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object id="window" class="GtkWindow">
+    <property name="title">Viewed design</property>
+    <child>
+      <object class="GtkBox" id="container">
+      </object>
+    </child>
+  </object>
+</interface>

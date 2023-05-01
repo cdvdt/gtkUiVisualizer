@@ -1,5 +1,7 @@
 build/**/*
 src/**/*.o
 .vscode/*
+src/ui/generated/*
+test_designs/*
 
 uncrustify.cfg

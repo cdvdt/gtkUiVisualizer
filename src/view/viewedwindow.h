@@ -6,7 +6,7 @@ G_BEGIN_DECLS
 #define VIEWED_TYPE_WINDOW viewed_window_get_type()
 G_DECLARE_FINAL_TYPE(ViewedWindow, viewed_window, VIEWED, WINDOW, GObject);
 
-ViewedWindow *viewed_window_new(char *filename);
+ViewedWindow *viewed_window_new(GFile *file);
 
 GtkWindow *viewed_window_get_window(ViewedWindow *self);
 
